@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const UserModel = require('../dbmodel/db');
+const {UserModel} = require('../dbmodel/db');
 const mongoose=require('mongoose');
 const ejs = require("ejs");
 const ifsc=require('ifsc');

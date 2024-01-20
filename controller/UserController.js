@@ -4,6 +4,10 @@ const mongoose=require('mongoose');
 const ejs = require("ejs");
 const ifsc=require('ifsc');
 const request=require('request');
+const viewsPath = path.join(__dirname);
+
+router.set('view engine', 'ejs');
+router.set('views', viewsPath);
 
 
 router.get('/',(req,res)=>{

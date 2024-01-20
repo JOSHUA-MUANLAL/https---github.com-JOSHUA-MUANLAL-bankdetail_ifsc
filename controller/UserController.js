@@ -8,8 +8,7 @@ const path=require('path');
 
 const viewsPath = path.join(__dirname);
 
-router.set('view engine', 'ejs');
-router.set('views', viewsPath);
+
 
 
 router.get('/',(req,res)=>{

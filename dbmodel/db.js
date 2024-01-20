@@ -4,7 +4,7 @@ const autoIncrement = require('mongoose-auto-increment');
 // Create a Mongoose connection
 try{
   
-  const connection = mongoose.createConnection('mongodb+srv://ciriktazumo:iwYUCXCu3sm1bQuE@joshua.gs3va5s.mongodb.net/');
+ const connection = mongoose.createConnection('mongodb+srv://ciriktazumo:iwYUCXCu3sm1bQuE@joshua.gs3va5s.mongodb.net/',{ useNewUrlParser: true, useUnifiedTopology: true });
 
 // Initialize mongoose-auto-increment with the Mongoose connection
 autoIncrement.initialize(connection);

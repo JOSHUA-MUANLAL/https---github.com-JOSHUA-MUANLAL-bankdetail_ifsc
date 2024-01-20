@@ -78,7 +78,7 @@ router.post('/register',async (req,res)=>{
             if (err) {
                 console.error("Error in Weather API request:", err);
                 // Handle the error response to the client if needed
-                res.status(500).send('Internal Server Error');
+                res.status(500).send('could fetch temperature 81');
                 return;
             }
 
@@ -126,7 +126,7 @@ router.post('/register',async (req,res)=>{
                 // Handle non-200 status code
                 console.error("Weather API returned non-200 status code:", response.statusCode);
                 // Send an error response to the client if needed
-                res.status(500).send('Internal Server Error');
+                res.status(500).send('Internal Server Error 129');
             }
         }) 
 

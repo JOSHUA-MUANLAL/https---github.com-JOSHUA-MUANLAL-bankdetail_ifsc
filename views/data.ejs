@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Table Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Monospace', monospace;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">User Data</h1>
+
+        <table class="min-w-full bg-white border border-gray-300 shadow-md rounded-md overflow-hidden">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="py-2 px-4 border-b">Name</th>
+                    <th class="py-2 px-4 border-b">ID</th>
+                    <th class="py-2 px-4 border-b">User ID</th>
+                    <th class="py-2 px-4 border-b">Bank Account</th>
+                    <th class="py-2 px-4 border-b">State</th>
+                    <th class="py-2 px-4 border-b">City</th>
+                    <th class="py-2 px-4 border-b">Branch</th>
+                    <th class="py-2 px-4 border-b">Address</th>
+                    <th class="py-2 px-4 border-b">District</th>
+                    <th class="py-2 px-4 border-b">Temp</th>
+                    <th class="py-2 px-4 border-b">Humidity</th>
+                    <th class="py-2 px-4 border-b">Bank Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your data here -->
+                <tr>
+                    <td class="py-2 px-4 border-b"><%=data.user_name%></td>
+                    <td class="py-2 px-4 border-b"><%=data._id%></td>
+                    <td class="py-2 px-4 border-b"><%=data.user_id%></td>
+                    <td class="py-2 px-4 border-b"><%=data.bank_accounts[0]%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.state%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.city%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.branch%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.address%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.district%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.weather.temp%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.weather.humidity%></td>
+                    <td class="py-2 px-4 border-b"><%=data.accounts.bank_code%></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

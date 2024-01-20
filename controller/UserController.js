@@ -30,7 +30,15 @@ router.post('/getDetail',(req,res)=>{
 router.get('/getdetail/:id',async (req,res)=>{
     const id=req.params.id;
 
-    const data = await UserModel.findOne({ user_id: id });
+   try {
+  const data = await UserModel.findOne({ user_id: id });
+  // Process the data or perform other operations here
+  console.log(data);
+} catch (error) {
+  // Handle errors here
+  console.error("89",error);
+}
+
 
     if(data){
         res.render('data',{data});

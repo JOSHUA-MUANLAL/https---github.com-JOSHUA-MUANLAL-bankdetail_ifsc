@@ -5,5 +5,8 @@
     "ifsc": "^1.6.1",
     "mongodb": "^6.3.0",
     "mongoose-auto-increment": "^3.0.1"
+  },
+  "scripts":{
+    "start":"node app.js"
   }
 }

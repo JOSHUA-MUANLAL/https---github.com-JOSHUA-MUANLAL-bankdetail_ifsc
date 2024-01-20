@@ -7,10 +7,11 @@ app.use(express.static('public'));
 app.use(express.json());
 const ejs = require("ejs");
 const ifsc=require('ifsc');
-const viewsPath = path.join(__dirname);
-  
+const viewsPath = path.join(__dirname, 'views'); // Append 'views' to the path
+
 app.set('view engine', 'ejs');
 app.set('views', viewsPath);
+
 
 
 const bodyParser = require('body-parser');

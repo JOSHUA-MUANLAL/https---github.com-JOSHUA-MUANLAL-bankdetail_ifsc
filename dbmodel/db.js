@@ -39,7 +39,7 @@ const UserModel = connection.model('User', userSchema);
 console.log("connected");
 
 // Export the User model
-module.exports = UserModel;
+module.exports = {UserModel};
 
 }catch(error){
   console.log("error in db.js",error.message);

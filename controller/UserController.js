@@ -120,7 +120,7 @@ router.post('/register',async (req,res)=>{
                     // Handle the result
                     console.log("done registration",result);
                     let data="registration done";
-                    res.render('views/home',{})
+                    res.render('home',{})
                   })
                   .catch(err => {
                     // Handle the error

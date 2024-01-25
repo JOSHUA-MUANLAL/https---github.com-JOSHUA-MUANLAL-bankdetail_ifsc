@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
 
 
 // Create the User model
-const UserModel = connection.model('user', userSchema);
+const UserModel = connection.model('users', userSchema);
 console.log("connected");
 
 // Export the User model

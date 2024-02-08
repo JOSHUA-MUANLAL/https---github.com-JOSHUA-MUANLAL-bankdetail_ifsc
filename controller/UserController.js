@@ -65,7 +65,7 @@ router.post('/register',async (req,res)=>{
 
     if(user){
         let msg="User Id already registered";
-        res.render('views/Register',{msg})
+        res.render('Register',{msg})
     }else{
         await insertData(req,res);
     }
@@ -79,7 +79,7 @@ router.post('/register',async (req,res)=>{
    try{ let bankid=req.body.BankAccount;
     if(ifsc.validate(bankid)==false){
         let msg="Invalid IFSC";
-        res.render('views/register',{msg});
+        res.render('register',{msg});
     }
     await ifsc.fetchDetails(bankid).then(function(result) {
         request(`https://api.openweathermap.org/data/2.5/weather?q=${result.CITY}&appid=4de4db30a24565b1ba581198fbedf9e4`,(err,response,body)=>{

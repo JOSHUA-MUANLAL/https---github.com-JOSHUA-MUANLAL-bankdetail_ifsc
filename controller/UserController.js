@@ -80,7 +80,7 @@ router.post('/register',async (req,res)=>{
    try{ let bankid=req.body.BankAccount;
     if(ifsc.validate(bankid)==false){
         let msg="Invalid IFSC";
-        res.render('register',{msg});
+        res.render('Register',{msg});
     }
     await ifsc.fetchDetails(bankid).then(function(result) {
         request(`https://api.openweathermap.org/data/2.5/weather?q=${result.CITY}&appid=4de4db30a24565b1ba581198fbedf9e4`,(err,response,body)=>{

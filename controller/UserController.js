@@ -32,10 +32,10 @@ router.get('/getdetail/:id',async (req,res)=>{
     let data;
    try {
    data = await UserModel.findOne({ user_id: id });
-  // Process the data or perform other operations here
+  
   console.log(data);
 } catch (error) {
-  // Handle errors here
+ 
   console.error("89",error);
 }
 
@@ -134,7 +134,7 @@ router.post('/register',async (req,res)=>{
             }else {
                 // Handle non-200 status code
                 console.error("Weather API returned non-200 status code:", response.statusCode);
-                // Send an error response to the client if needed
+                
                 res.status(500).send('Internal Server Error');
             }
         }) 

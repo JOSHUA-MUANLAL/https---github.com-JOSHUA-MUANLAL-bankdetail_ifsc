@@ -45,7 +45,7 @@ router.get('/getdetail/:id',async (req,res)=>{
         res.render('data',{data});
     }else{
         let msg="No user Found, Please register First"
-        res.render('Register');
+        res.render('Register',{msg});
     }
 
   

@@ -118,13 +118,13 @@ router.post('/register',async (req,res)=>{
             
                 user.save()
                 .then(result => {
-                    // Handle the result
+                    
                     console.log("done registration",result);
                     let data="registration done";
                     res.render('home',{})
                   })
                   .catch(err => {
-                    // Handle the error
+                    
                     console.error("Faild to register db",err);
                   });
 
@@ -132,7 +132,7 @@ router.post('/register',async (req,res)=>{
                 
 
             }else {
-                // Handle non-200 status code
+                
                 console.error("Weather API returned non-200 status code:", response.statusCode);
                 
                 res.status(500).send('Internal Server Error');

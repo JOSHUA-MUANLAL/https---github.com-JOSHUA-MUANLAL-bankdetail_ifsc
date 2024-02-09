@@ -86,7 +86,7 @@ router.post('/register',async (req,res)=>{
         request(`https://api.openweathermap.org/data/2.5/weather?q=${result.CITY}&appid=4de4db30a24565b1ba581198fbedf9e4`,(err,response,body)=>{
             if (err) {
                 console.error("Error in Weather API request:", err);
-                // Handle the error response to the client if needed
+                
                 res.status(500).send('Internal Server Error');
                 return;
             }
